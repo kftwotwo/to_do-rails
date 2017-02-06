@@ -39,6 +39,11 @@ class TasksController < ApplicationController
     redirect_to list_path(@task.list)
   end
 
+  def done_toggle
+    self.done = !self.done
+    render :edit
+  end
+
 private
   def task_params
     params.require(:task).permit(:description)

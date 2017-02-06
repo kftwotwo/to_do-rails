@@ -4,10 +4,8 @@ Rails.application.routes.draw do
   # Lists route
   resources :lists do
     resources :tasks
+    patch 'tasks/done_toggle', to: 'tasks#done_toggle'
   end
-  
-  # resources :tasks do
-  #   resources :subtasks
-  # end
+
 
 end
