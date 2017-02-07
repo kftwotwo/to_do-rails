@@ -1,12 +1,12 @@
 # To do Rails
 
- This is a to do task application, 2/7/2017
+ This is a to do task application, 2/6/2017
 
  By [Kevin Finley](http://www.kfinley.com), Jim Padilla
 
 ## Description
 
-{content}
+This application you can add/edit/delete lists and in those lists you can add task and have all the curd functionality.
 
 ## Setup/Installation Requirements
 
@@ -24,7 +24,7 @@ URL: localhost:3000
 If you notice any bugs or problems you can fill out an issue [here](http://www.github.com/kftwotwo/to_do-rails/issues) or feel free to submit a pull request.
 
 ## Contact details
-Here are some ways you can contact Kevin! 
+Here are some ways you can contact Kevin!
 
   Gmail: kftwotwo@gmail.com  
   Github: [kftwotwo](https://www.github.com/kftwotwo)  
