@@ -2,7 +2,6 @@
 
 <ul>
   <% @lists.each do |list| %>
-  <!-- list_path name determined by route.rb: resourcename_path -->
     <li><%= link_to list.name, list_path(list) %></li>
   <% end %>
 </ul>

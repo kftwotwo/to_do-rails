@@ -17,14 +17,12 @@ class TasksController < ApplicationController
   def edit
     @list = List.find(params[:list_id])
     @task = Task.find(params[:id])
-    render :edit
   end
 
   def update
     @list = List.find(params[:list_id])
     @task = Task.find(params[:id])
     if @task.update(task_params)
-                  # Redirects to this this and passes in it's tasks
       redirect_to list_path(@task.list)
     else
       render :edit
@@ -35,13 +33,7 @@ class TasksController < ApplicationController
     @list = List.find(params[:list_id])
     @task = Task.find(params[:id])
     @task.destroy
-                #lists_path would take you to all lists
     redirect_to list_path(@task.list)
-  end
-
-  def done_toggle
-    self.done = !self.done
-    render :edit
   end
 
 private
