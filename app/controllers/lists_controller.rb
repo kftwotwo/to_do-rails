@@ -13,13 +13,16 @@ class ListsController < ApplicationController
   end
 
   def create
-   @list = List.new(list_params)
-   if @list.save
-     flash[:notice] = "List successfully added!"
-     redirect_to  lists_path(@list)
-   else
-     render :new
-   end
+    @list = List.new(list_params)
+    if @list.save
+      flash[:notice] = "List successfully added!"
+      respond_to do |format|
+        format.html {redirect_to lists_path(@list)}
+        format.js
+      end
+    else
+      render :new
+    end
   end
 
   def edit
